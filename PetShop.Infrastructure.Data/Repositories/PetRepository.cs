@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
@@ -31,7 +32,8 @@ namespace PetShop.Infrastructure.Data.Repositories
 
         public IEnumerable<Pet> ReadPets(Filter filter = null)
         {
-            if (filter == null)
+            if (filter == null ||
+                filter.CurrentPage == 0 && filter.ItemsPerPage == 0)
             {
                 return _ctx.Pets;
             }
