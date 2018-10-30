@@ -58,6 +58,19 @@ namespace PetShop.Infrastructure.Data
                 Price = 180.69
             });
 
+            var admin = ctx.Users.Add(new User()
+            {
+                Username = "Admin",
+                Password = "8C6976E5B5410415BDE908BD4DEE15DFB167A9C873FC4BB8A81F6F2AB448A918",
+                AccessLvl = 0
+            });
+            
+            var user = ctx.Users.Add(new User()
+            {
+                Username = "User",
+                Password = "04F8996DA763B7A969B1028EE3007569EAF3A635486DDAB211D512C85B9DF8FB",
+                AccessLvl = 5
+            });
             ctx.SaveChanges();
         }
     }

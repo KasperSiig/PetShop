@@ -57,6 +57,9 @@ namespace PetShop.RestApi
 
             services.AddScoped<IOwnerRepository, OwnerRepository>();
             services.AddScoped<IOwnerService, OwnerService>();
+            
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserService, UserService>();
 
             services.AddMvc().AddJsonOptions(options =>
             {
