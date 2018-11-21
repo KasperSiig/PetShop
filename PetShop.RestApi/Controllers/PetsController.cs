@@ -7,7 +7,7 @@ using PetShop.Core.Entity;
 
 namespace PetShop.RestApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class PetsController : ControllerBase
     {

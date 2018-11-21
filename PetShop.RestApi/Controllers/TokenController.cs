@@ -10,7 +10,7 @@ using TodoApi.Helpers;
 
 namespace PetShop.RestApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class TokenController : ControllerBase
     {
@@ -25,11 +25,10 @@ namespace PetShop.RestApi.Controllers
         public ActionResult Login([FromBody] LoginInputModel model)
         {
             var user = _userService.GetUser(model.Username);
-            
             if (user == null)
                 return Unauthorized();
 
-            if (!model.Password.Equals(user.Password))
+            if (!VerifyPasswordHash(model.Password, user.PasswordHash, user.PasswordSalt))
                 return Unauthorized();
 
             return Ok(new
@@ -37,6 +36,19 @@ namespace PetShop.RestApi.Controllers
                 username = user.Username,
                 token = GenerateToken(user)
             });
+        }
+
+        private bool VerifyPasswordHash(string password, byte[] storedHash, byte[] storedSalt)
+        {
+            using (var hmac = new System.Security.Cryptography.HMACSHA512(storedSalt))
+            {
+                var computedHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
+                for (int i = 0; i < computedHash.Length; i++)
+                {
+                    if (computedHash[i] != storedHash[i]) return false;
+                }
+            }
+            return true;
         }
 
         private string GenerateToken(User user)

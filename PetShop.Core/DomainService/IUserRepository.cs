@@ -4,6 +4,6 @@ namespace PetShop.Core.DomainService
 {
     public interface IUserRepository
     {
-        User ReadUser(string username);
+        User ReadUserByUsername(string username);
     }
 }

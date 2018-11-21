@@ -14,7 +14,7 @@ namespace PetShop.Core.ApplicationService.Impl
 
         public User GetUser(string username)
         {
-            return _userRepo.ReadUser(username);
+            return _userRepo.ReadUserByUsername(username);
         }
     }
 }

@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  petshop.restapi:
+    image: ${DOCKER_REGISTRY-}petshop
+    build:
+      context: .
+      dockerfile: PetShop.RestApi/Dockerfile
