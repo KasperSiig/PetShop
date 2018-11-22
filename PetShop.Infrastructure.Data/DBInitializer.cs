@@ -49,7 +49,7 @@ namespace PetShop.Infrastructure.Data
             
             var pet2 = ctx.Pets.Add(new Pet
             {
-                Name = "Karin",
+                Name = "Lone",
                 Type = "Goat",
                 Birthdate = new DateTime(1992, 07, 18),
                 SoldDate = new DateTime(2006, 05, 24),
