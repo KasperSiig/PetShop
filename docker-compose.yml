@@ -1,8 +1,11 @@
-version: '3.4'
+version: '2'
 
 services:
   petshop.restapi:
-    image: ${DOCKER_REGISTRY-}petshop
+    image: petshop
+    container_name: petshop-api
+    ports:
+      - 32768:80
     build:
       context: .
       dockerfile: PetShop.RestApi/Dockerfile
