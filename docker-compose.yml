@@ -2,7 +2,7 @@ version: '2'
 
 services:
   petshop.restapi:
-    image: ${DOCKER_REGISTRY-}petshop
+    image: petshop
     build:
       context: .
       dockerfile: PetShop.RestApi/Dockerfile
