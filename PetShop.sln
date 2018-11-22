@@ -1,5 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{7BC0001A-E35F-44DC-91A3-7F46D66A3C70}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{33AA826C-0D31-4E53-940A-0E6EAD946B1D}"
@@ -13,6 +14,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetShop.Infrastructure.Data", "PetShop.Infrastructure.Data\PetShop.Infrastructure.Data.csproj", "{2E0210C5-9DAD-4FDF-AC42-A399FB88903B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetShop.RestApi", "PetShop.RestApi\PetShop.RestApi.csproj", "{ACCC584D-9FF4-4029-8BB7-13A2EE4E1F83}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{612EBD77-EA64-40B8-BAB2-AD8B3CA538C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,5 +45,9 @@ Global
 		{ACCC584D-9FF4-4029-8BB7-13A2EE4E1F83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACCC584D-9FF4-4029-8BB7-13A2EE4E1F83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACCC584D-9FF4-4029-8BB7-13A2EE4E1F83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{612EBD77-EA64-40B8-BAB2-AD8B3CA538C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{612EBD77-EA64-40B8-BAB2-AD8B3CA538C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{612EBD77-EA64-40B8-BAB2-AD8B3CA538C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{612EBD77-EA64-40B8-BAB2-AD8B3CA538C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
