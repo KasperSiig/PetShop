@@ -5,7 +5,8 @@ services:
     image: petshop
     container_name: petshop-api
     ports:
-      - 32768:80
+      - 58000:80
+      - 58001:443
     build:
       context: .
       dockerfile: PetShop.RestApi/Dockerfile
