@@ -4,6 +4,8 @@ services:
   petshop.restapi:
     image: petshop
     container_name: petshop-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
     ports:
       - 58000:80
       - 58001:443
