@@ -99,6 +99,7 @@ namespace PetShop.RestApi
                     var ctx = scope.ServiceProvider.GetService<PetShopContext>();
                     DBInitializer.SeedDB(ctx);
                 }
+                app.UseHsts();
             }
             else
             {
