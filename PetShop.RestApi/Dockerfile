@@ -20,4 +20,8 @@ RUN dotnet publish PetShop.RestApi.csproj -c Release -o /app
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app .
+COPY kaspersiig.pfx .
+ENV ASPNETCORE_URLS="https://+;http://+"
+ENV ASPNETCORE_Kestrel__Certificates__Default__Password="pht84gxp"
+ENV ASPNETCORE_Kestrel__Certificates__Default__Path="kaspersiig.pfx"
 ENTRYPOINT ["dotnet", "PetShop.RestApi.dll"]
